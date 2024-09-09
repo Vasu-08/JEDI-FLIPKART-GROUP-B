@@ -87,6 +87,7 @@ public class GymFlipFitApplication {
                             case "GymOwner": {
                                 // gym owner
                                 FlipFitUser gymOwner = new FlipFitUser();
+
                                 gymOwner.setEmailID(username);
                                 gymOwner.setPassword(password);
 
@@ -94,13 +95,17 @@ public class GymFlipFitApplication {
                                 FlipFitGymOwnerBusiness GOBservice = new FlipFitGymOwnerBusiness(flipFitGymOwnerDAO);
 
                                 gymOwner = GOBservice.login(gymOwner);
+
                                 System.out.println("GymOwner Menu");
                                 GymFlipFitOwnerMenu.getFlipFitOwnerView(gymOwner);
+
                                 break;
                             }
                         }
+
                         break;
                     }
+
                     case 2: {
                         System.out.println("Registration of gym customer");
 
@@ -152,24 +157,34 @@ public class GymFlipFitApplication {
                         GymFlipFitCustomerMenu.getFlipFitCustomerMenu(gymCustomer);
                         break;
                     }
+
                     case 3: {
                         System.out.println("Registration of gym owner");
+
                         System.out.println("Enter your email address:> ");
                         String emailID = in.next();
+
                         System.out.println("Enter your phone number:> ");
                         String phoneNumber = in.next();
+
                         System.out.println("Enter your city:> ");
                         String city = in.next();
+
                         System.out.println("Enter your pin code:> ");
                         String pinCode = in.next();
+
                         System.out.println("Enter your password:> ");
                         String password = in.next();
+
                         System.out.println("Enter username: ");
                         String username = in.next();
+
                         System.out.println("Enter your panId: ");
                         String panId = in.next();
+
                         System.out.println("Enter your gstNum: ");
                         String gstNum = in.next();
+
                         System.out.println("Enter your aadharNumber: ");
                         String aadharNumber = in.next();
 
@@ -191,22 +206,22 @@ public class GymFlipFitApplication {
                         FlipFitGymOwnerBusiness GOBservice = new FlipFitGymOwnerBusiness(flipFitGymOwnerDAO);
 
                         GOBservice.registerOwner(flipFitOwner);
-
-                        System.out.println("Registration completed");
+                        System.out.println("Successfully registered");
 
                         break;
                     }
+
                     case 4: {
                         System.out.println("Exit");
                         return;
-
                     }
+
                     default: {
                         throw new InvalidChoiceException("Invalid choice entered: " + choice);
                     }
                 }
             }
-            while (choice != 5);
+            while (true);
         } catch (InvalidChoiceException e) {
             ExceptionHandler.InvalidChoiceMainMenu(e);
         }

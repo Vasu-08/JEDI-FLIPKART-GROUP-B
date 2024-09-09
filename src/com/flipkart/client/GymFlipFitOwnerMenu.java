@@ -33,9 +33,12 @@ public class GymFlipFitOwnerMenu {
                         
                          3. Add slot\
                         
-                         4. Logout""");
+                         4. Delete slot\
+                        
+                         5. Logout""");
 
                 choice = sc.nextInt();
+
                 switch (choice) {
                     case 1: {
                         System.out.println("Give details to add Centre : ");
@@ -69,16 +72,21 @@ public class GymFlipFitOwnerMenu {
                         System.out.println("Gym Centre created successfully.");
                         break;
                     }
+
                     case 2: {
                         System.out.println("View Centres for the owner : " + gymOwner.getUserID());
+
                         FlipFitGymOwner flipFitGymOwner = new FlipFitGymOwner();
                         flipFitGymOwner.setUserId(gymOwner.getUserID());
+
                         List<FlipFitGymCentre> centreList = GOBservice.viewCentres(flipFitGymOwner);
                         for (FlipFitGymCentre centre : centreList) {
                             System.out.println("CentreID : " + centre.getCentreID() + " Capacity : " + centre.getCapacity() + " City : " + centre.getCity() + " State : " + centre.getState());
                         }
+
                         break;
                     }
+
                     case 3: {
                         System.out.println("Give details to add slot in a gym");
 
@@ -105,6 +113,19 @@ public class GymFlipFitOwnerMenu {
                     }
 
                     case 4: {
+                        System.out.println("Enter centre id");
+                        int centreId = sc.nextInt();
+
+                        System.out.println("Enter slot id");
+                        int slotId = sc.nextInt();
+
+                        FlipFitSlotDAOImpl slotDAO = new FlipFitSlotDAOImpl();
+                        slotDAO.deleteSlot(centreId, slotId);
+
+                        break;
+                    }
+
+                    case 5: {
                         System.out.println("Successful logout");
                         break;
                     }

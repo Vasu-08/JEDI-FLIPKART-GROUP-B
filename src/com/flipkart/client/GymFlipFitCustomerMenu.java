@@ -23,20 +23,32 @@ public class GymFlipFitCustomerMenu {
         try {
             int userId = gymCustomer.getUserID();
             Scanner sc = new Scanner(System.in);
+
             FlipFitGymCustomerDAOImpl flipFitGymCustomerDAO = new FlipFitGymCustomerDAOImpl();
             FlipFitGymCustomerBusiness FCBservice = new FlipFitGymCustomerBusiness(flipFitGymCustomerDAO);
+
             FlipFitGymCentreDAOImpl flipFitGymCenterDAO = new FlipFitGymCentreDAOImpl();
             FlipFitGymCentreBusiness FCService = new FlipFitGymCentreBusiness(flipFitGymCenterDAO);
+
             FlipFitBookingDAOImpl flipFitBookingDAO = new FlipFitBookingDAOImpl();
             BookingsBusiness BService = new BookingsBusiness(flipFitBookingDAO);
+
             int choice = 0;
+
             do {
                 System.out.println("FlipFit Customer Menu:> ");
-                System.out.println("Choose an option:" +
-                        "\n 1. View Booked Slots" +
-                        "\n 2. View Centres" +
-                        "\n 3. Logout");
+                System.out.println("""
+                        Choose an option:\
+                        
+                         1. View Booked Slots\
+                        
+                         2. View Centres\
+                        
+                         3. Logout"""
+                );
+
                 choice = sc.nextInt();
+
                 switch (choice) {
                     case 1: {
                         System.out.println("View Booked Slots:");
@@ -46,11 +58,13 @@ public class GymFlipFitCustomerMenu {
                         System.out.println("Type 2. To return to main menu");
 
                         choice = sc.nextInt();
+
                         if (choice == 1) {
                             System.out.println("Choose the booking ID you wish to cancel");
                             int bookingId = sc.nextInt();
                             BService.deleteBooking(bookingId);
                         }
+
                         break;
                     }
                     case 2: {

@@ -39,14 +39,15 @@ public class FlipFitSlotDAOImpl implements IFlipFitSlotDAO {
 
 
     @Override
-    public boolean deleteSlot(int slotID) {
+    public boolean deleteSlot(int centreID, int slotID) {
         try {
             Class.forName("com.mysql.cj.jdbc.Driver");
             Connection con = DriverManager.getConnection(
                     DBConstants.DB_URL, DBConstants.USER, DBConstants.PASSWORD);
 
-            PreparedStatement stmt = con.prepareStatement("DELETE FROM Slots WHERE slotId = ?");
+            PreparedStatement stmt = con.prepareStatement("DELETE FROM Slots WHERE centreId = ? AND slotID = ?");
 
+            stmt.setInt(1, centreID);
             stmt.setInt(1, slotID);
 
             int i = stmt.executeUpdate();
