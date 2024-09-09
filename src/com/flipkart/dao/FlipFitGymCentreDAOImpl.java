@@ -38,6 +38,12 @@ public class FlipFitGymCentreDAOImpl {
 //            System.out.println(fs.getSlotId());
 //        }
 //    }
+
+    /**
+     * createGymCentre
+     * @param FFGC
+     * @return
+     */
     public FlipFitGymCentre createGymCentre(FlipFitGymCentre FFGC){
         try{
             Class.forName("com.mysql.cj.jdbc.Driver");
@@ -67,6 +73,11 @@ public class FlipFitGymCentreDAOImpl {
         return FFGC;
     };
 
+    /**
+     * updateGymCentre
+     * @param FFGC
+     * @return
+     */
     public FlipFitGymCentre updateGymCentre(FlipFitGymCentre FFGC){
         try{
             Class.forName("com.mysql.cj.jdbc.Driver");
@@ -94,6 +105,10 @@ public class FlipFitGymCentreDAOImpl {
         return FFGC;
     };
 
+    /**
+     * deleteGymCentre
+     * @param FFGC
+     */
     public void deleteGymCentre(FlipFitGymCentre FFGC){
         try{
             Class.forName("com.mysql.cj.jdbc.Driver");
@@ -113,6 +128,11 @@ public class FlipFitGymCentreDAOImpl {
         }
     };
 
+    /**
+     * viewCentres
+     * @param city
+     * @return
+     */
     public ArrayList<FlipFitGymCentre> viewCentres(String city){
         ArrayList<FlipFitGymCentre> ffarray = new ArrayList<FlipFitGymCentre>();
         try{
@@ -147,6 +167,11 @@ public class FlipFitGymCentreDAOImpl {
         return ffarray;
     }
 
+    /**
+     * viewAvailableSlots
+     * @param FFGC
+     * @return
+     */
     public ArrayList<FlipFitSlots> viewAvailableSlots(FlipFitGymCentre FFGC){
             ArrayList<FlipFitSlots> ffarray = new ArrayList<FlipFitSlots>();
 

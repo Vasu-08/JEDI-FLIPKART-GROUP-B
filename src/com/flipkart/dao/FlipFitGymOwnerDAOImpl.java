@@ -12,6 +12,12 @@ import com.flipkart.bean.FlipFitUser;
 
 public class FlipFitGymOwnerDAOImpl implements IFlipFitGymOwnerDAO {
     Random rand = new Random();
+
+    /**
+     * addCentre
+     * @param centre
+     * @return
+     */
     @Override
     public FlipFitGymCentre addCentre(FlipFitGymCentre centre) {
         String sql = "INSERT INTO GymCentre (ownerID, capacity, approved, city, state, pincode) VALUES (?, ?, ?, ?, ?, ?)";
@@ -42,6 +48,11 @@ public class FlipFitGymOwnerDAOImpl implements IFlipFitGymOwnerDAO {
         return centre;
     }
 
+    /**
+     * viewCentresByOwnerID
+     * @param owner
+     * @return
+     */
     @Override
     public List<FlipFitGymCentre> viewCentresByOwnerID(FlipFitGymOwner owner) {
         List<FlipFitGymCentre> gymcentres = new ArrayList<>();
@@ -88,9 +99,11 @@ public class FlipFitGymOwnerDAOImpl implements IFlipFitGymOwnerDAO {
 //        return flipfitusers;
 //   }
 
-
-
-
+    /**
+     * editDetails
+     * @param owner
+     * @return
+     */
     @Override
     public FlipFitGymOwner editDetails(FlipFitGymOwner owner) {
         int userId = owner.getUserId();
@@ -113,6 +126,11 @@ public class FlipFitGymOwnerDAOImpl implements IFlipFitGymOwnerDAO {
         return null;
     }
 
+    /**
+     * addUser
+     * @param user
+     * @return
+     */
     @Override
     public FlipFitUser addUser(FlipFitUser user) {
         String sql = "INSERT INTO User (userName, roleID, emailID, phoneNumber, password) VALUES (?, ?, ?, ?, ?)";
@@ -141,7 +159,12 @@ public class FlipFitGymOwnerDAOImpl implements IFlipFitGymOwnerDAO {
         return user;
     }
 
-
+    /**
+     * addGymOwner
+     * @param owner
+     * @param user
+     * @return
+     */
     @Override
     public FlipFitGymOwner addGymOwner(FlipFitGymOwner owner, FlipFitUser user) {
         String sql = "INSERT INTO GymOwner (ownerID ,PAN, Aadhar, GSTIN, approved) VALUES (?, ?, ?, ?, ?)";

@@ -18,7 +18,11 @@ import java.util.Scanner;
 import java.util.List;
 
 public class GymFlipFitCustomerMenu {
-
+    /**
+     * getFlipFitCustomerMenu
+     * @param gymCustomer
+     * @throws InvalidChoiceException
+     */
     public static void getFlipFitCustomerMenu(FlipFitUser gymCustomer) throws InvalidChoiceException {
         try {
             int userId = gymCustomer.getUserID();

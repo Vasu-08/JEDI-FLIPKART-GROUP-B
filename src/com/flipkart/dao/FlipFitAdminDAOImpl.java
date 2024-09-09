@@ -8,6 +8,11 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class FlipFitAdminDAOImpl implements  IFlipFitAdminDAO {
+    /**
+     * adminLogin
+     * @param flipFitAdmin
+     * @return
+     */
     @Override
     public boolean adminLogin(FlipFitAdmin flipFitAdmin) {
         String sql = "SELECT * FROM GymAdmin WHERE emailId = ? AND password = ?";
@@ -35,6 +40,10 @@ public class FlipFitAdminDAOImpl implements  IFlipFitAdminDAO {
         }
     }
 
+    /**
+     * getPendingOwnerList
+     * @return
+     */
     @Override
     public List<FlipFitGymOwner> getPendingOwnerList() {
         List<FlipFitGymOwner> pendingOwners = new ArrayList<>();
@@ -55,6 +64,11 @@ public class FlipFitAdminDAOImpl implements  IFlipFitAdminDAO {
         }
         return pendingOwners;
     }
+
+    /**
+     * getApprovedOwnerList
+     * @return
+     */
     @Override
     public List<FlipFitGymOwner> getApprovedOwnerList() {
         List<FlipFitGymOwner> pendingOwners = new ArrayList<>();
@@ -76,7 +90,10 @@ public class FlipFitAdminDAOImpl implements  IFlipFitAdminDAO {
         return pendingOwners;
     }
 
-
+    /**
+     * getUserList
+     * @return
+     */
     @Override
     public List<FlipFitGymCustomer> getUserList() {
         List<FlipFitGymCustomer> users = new ArrayList<>();
@@ -98,6 +115,11 @@ public class FlipFitAdminDAOImpl implements  IFlipFitAdminDAO {
         return users;
     }
 
+    /**
+     * validateOwner
+     * @param ownerId
+     * @return
+     */
     @Override
     public boolean validateOwner(int ownerId) {
         String sql = "UPDATE GymOwner SET approved = 1 WHERE ownerID = ?";
@@ -112,6 +134,11 @@ public class FlipFitAdminDAOImpl implements  IFlipFitAdminDAO {
         }
     }
 
+    /**
+     * deleteOwner
+     * @param ownerId
+     * @return
+     */
     @Override
     public boolean deleteOwner(int ownerId) {
         String sql = "DELETE FROM GymOwner WHERE ownerID = ?";
@@ -125,6 +152,12 @@ public class FlipFitAdminDAOImpl implements  IFlipFitAdminDAO {
             return false;
         }
     }
+
+    /**
+     * getGymCentreUsingOwnerId
+     * @param ownerId
+     * @return
+     */
     @Override
     public List<FlipFitGymCentre> getGymCentreUsingOwnerId(int ownerId) {
         List<FlipFitGymCentre> gymCentres = new ArrayList<>();

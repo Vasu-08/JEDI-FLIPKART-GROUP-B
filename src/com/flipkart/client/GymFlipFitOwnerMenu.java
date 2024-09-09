@@ -14,6 +14,11 @@ import java.util.List;
 import java.util.Scanner;
 
 public class GymFlipFitOwnerMenu {
+    /**
+     * getFlipFitOwnerView
+     * @param gymOwner
+     * @throws InvalidChoiceException
+     */
     public static void getFlipFitOwnerView(FlipFitUser gymOwner) throws InvalidChoiceException {
         try {
             FlipFitGymOwnerDAOImpl flipFitGymOwnerDAO = new FlipFitGymOwnerDAOImpl();

@@ -17,6 +17,11 @@ import com.flipkart.exceptions.InvalidChoiceException;
 import java.util.*;
 
 public class GymFlipFitApplication {
+    /**
+     * main
+     * @param args
+     * @throws InvalidChoiceException
+     */
     public static void main(String[] args) throws InvalidChoiceException {
         try {
             Scanner in = new Scanner(System.in);

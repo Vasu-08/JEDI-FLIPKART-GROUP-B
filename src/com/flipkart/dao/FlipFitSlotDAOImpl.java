@@ -10,6 +10,11 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class FlipFitSlotDAOImpl implements IFlipFitSlotDAO {
+    /**
+     * addSlot
+     * @param slot
+     * @return
+     */
     @Override
     public FlipFitSlots addSlot(FlipFitSlots slot) {
         String sql = "INSERT INTO Slots (centreID, slotTime, seatsAvailable) VALUES (?, ?, ?)";
@@ -37,7 +42,12 @@ public class FlipFitSlotDAOImpl implements IFlipFitSlotDAO {
         return slot;
     }
 
-
+    /**
+     * deleteSlot
+     * @param centreID
+     * @param slotID
+     * @return
+     */
     @Override
     public boolean deleteSlot(int centreID, int slotID) {
         try {
@@ -64,6 +74,11 @@ public class FlipFitSlotDAOImpl implements IFlipFitSlotDAO {
         return false;
     }
 
+    /**
+     * changeSlot
+     * @param slot
+     * @return
+     */
     @Override
     public boolean changeSlot(FlipFitSlots slot) {
         String sql = "UPDATE Slots SET centreID = ?, slotTime = ?, seatsAvailable = ? WHERE slotID = ?";
@@ -84,6 +99,11 @@ public class FlipFitSlotDAOImpl implements IFlipFitSlotDAO {
         return true;
     }
 
+    /**
+     * getAllSlots
+     * @param centreID
+     * @return
+     */
     @Override
     public List<FlipFitSlots> getAllSlots(int centreID) {
         List<FlipFitSlots> slots = new ArrayList<>();
@@ -120,6 +140,11 @@ public class FlipFitSlotDAOImpl implements IFlipFitSlotDAO {
         return slots;
     }
 
+    /**
+     * getSlotDetailsById
+     * @param slotId
+     * @return
+     */
     @Override
     public FlipFitSlots getSlotDetailsById(int slotId) {
         String sql = "SELECT * FROM Slots WHERE slotID=?";
@@ -149,6 +174,12 @@ public class FlipFitSlotDAOImpl implements IFlipFitSlotDAO {
         return null;
     }
 
+    /**
+     * getSlotDetails
+     * @param startTime
+     * @param centreID
+     * @return
+     */
     @Override
     public FlipFitSlots getSlotDetails(int startTime, int centreID) {
         String sql = "SELECT * FROM Slots WHERE slotTime = ? AND centreID = ?";

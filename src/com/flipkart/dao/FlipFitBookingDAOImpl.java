@@ -48,6 +48,11 @@ public class FlipFitBookingDAOImpl implements IFlipFitBookingDAO {
 //            }
 //        }
 
+    /**
+     * makeBooking
+     * @param booking
+     * @return
+     */
     @Override
     public FlipFitBooking makeBooking(FlipFitBooking booking) {
         String sql = "INSERT INTO Booking (userID, slotTime, slotID, isDeleted) VALUES (?, ?, ?, ?)";
@@ -78,6 +83,11 @@ public class FlipFitBookingDAOImpl implements IFlipFitBookingDAO {
         return booking;
     }
 
+    /**
+     * deleteBooking
+     * @param bookingId
+     * @return
+     */
     @Override
     public boolean deleteBooking(int bookingId) {
         String sql = "DELETE FROM Booking WHERE bookingID = ?";
@@ -93,6 +103,11 @@ public class FlipFitBookingDAOImpl implements IFlipFitBookingDAO {
         }
     }
 
+    /**
+     * getAllBookings
+     * @param userId
+     * @return
+     */
     @Override
     public List<FlipFitBooking> getAllBookings(int userId) {
         List<FlipFitBooking> bookings = new ArrayList<>(); // Initialize the list to an empty list
@@ -132,6 +147,11 @@ public class FlipFitBookingDAOImpl implements IFlipFitBookingDAO {
         return bookings; // Always return the list, even if it's empty
     }
 
+    /**
+     * getBookingDetails
+     * @param bookingId
+     * @return
+     */
     @Override
     public List getBookingDetails(int bookingId) {
         List bookings = new ArrayList<>();
@@ -167,6 +187,12 @@ public class FlipFitBookingDAOImpl implements IFlipFitBookingDAO {
         }
         return bookings;
     }
+
+    /**
+     * getBookingDetailsByBookingI
+     * @param bookingId
+     * @return
+     */
     public FlipFitBooking getBookingDetailsByBookingId(int bookingId) {
         FlipFitBooking booking = null;
         String sql = "SELECT * FROM Booking WHERE bookingID = ?";

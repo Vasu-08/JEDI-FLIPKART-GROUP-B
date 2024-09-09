@@ -6,6 +6,11 @@ import java.sql.*;
 
 
 public class FlipFitGymCustomerDAOImpl implements IFlipFitGymCustomerDAO{
+    /**
+     * viewBookedSlots
+     * @param userID
+     * @return
+     */
     public List<FlipFitSlots> viewBookedSlots(int userID) {
         List<FlipFitSlots> bookedSlots = new ArrayList<>();
         String sql = "SELECT * FROM Booking WHERE userID = ? and isDeleted=FALSE";
@@ -26,7 +31,12 @@ public class FlipFitGymCustomerDAOImpl implements IFlipFitGymCustomerDAO{
         return bookedSlots;
     }
 
-
+    /**
+     * checkBookingConflicts
+     * @param userId
+     * @param slotTime
+     * @return
+     */
     public FlipFitBooking checkBookingConflicts(int userId, int slotTime) {
         String sql = "SELECT * FROM Booking WHERE userID = ? and slotTime = ?";
         try (Connection conn = GetConnection.getConnection(); PreparedStatement stmt = conn.prepareStatement(sql)){
@@ -49,7 +59,10 @@ public class FlipFitGymCustomerDAOImpl implements IFlipFitGymCustomerDAO{
         return null;
     }
 
-
+    /**
+     * viewCentres
+     * @return
+     */
     public List<FlipFitGymCentre> viewCentres() {
         List<FlipFitGymCentre> gymcentres = new ArrayList<>();
         String sql = "SELECT * FROM GymCentre";
@@ -72,21 +85,36 @@ public class FlipFitGymCustomerDAOImpl implements IFlipFitGymCustomerDAO{
         return gymcentres;
     }
 
-
+    /**
+     * makePayment
+     * @param userID
+     * @return
+     */
     public boolean makePayment(int userID) {
         return false;
     }
 
-
+    /**
+     * viewPaymentDetails
+     * @param userID
+     */
     public void viewPaymentDetails(int userID) {
 
     }
 
+    /**
+     * editPaymentDetails
+     * @param userID
+     */
     public void editPaymentDetails(int userID) {
 
     }
 
-
+    /**
+     * editDetails
+     * @param customer
+     * @return
+     */
     public FlipFitGymCustomer editDetails(FlipFitGymCustomer customer) {
         String sql = "UPDATE Customer SET city=?, pincode=? WHERE customerID=?";
 
@@ -119,6 +147,11 @@ public class FlipFitGymCustomerDAOImpl implements IFlipFitGymCustomerDAO{
         return customer;
     }
 
+    /**
+     * addUser
+     * @param user
+     * @return
+     */
     public FlipFitUser addUser(FlipFitUser user) {
         String sql = "INSERT INTO User (userName, roleID, emailID, phoneNumber, password) VALUES (?, ?, ?, ?, ?)";
         try (Connection conn = GetConnection.getConnection(); PreparedStatement stmt = conn.prepareStatement(sql, Statement.RETURN_GENERATED_KEYS)) {
@@ -147,7 +180,12 @@ public class FlipFitGymCustomerDAOImpl implements IFlipFitGymCustomerDAO{
         return user;
     }
 
-
+    /**
+     * addCustomer
+     * @param customer
+     * @param user
+     * @return
+     */
     public FlipFitGymCustomer addCustomer(FlipFitGymCustomer customer, FlipFitUser user) {
         String sql = "INSERT INTO Customer (customerID, city, pincode) VALUES (?, ?, ?)";
         try (Connection conn = GetConnection.getConnection(); PreparedStatement stmt = conn.prepareStatement(sql)) {
