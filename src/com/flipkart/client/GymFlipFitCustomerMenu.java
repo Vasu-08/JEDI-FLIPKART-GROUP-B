@@ -41,9 +41,12 @@ public class GymFlipFitCustomerMenu {
                     case 1: {
                         System.out.println("View Booked Slots:");
                         FCBservice.viewBookedSlots(userId);
-                        System.out.println("Type 2. If you wish to cancel");
+
+                        System.out.println("Type 1. If you wish to cancel");
+                        System.out.println("Type 2. To return to main menu");
+
                         choice = sc.nextInt();
-                        if (choice == 2) {
+                        if (choice == 1) {
                             System.out.println("Choose the booking ID you wish to cancel");
                             int bookingId = sc.nextInt();
                             BService.deleteBooking(bookingId);
@@ -74,6 +77,7 @@ public class GymFlipFitCustomerMenu {
                         int centreID = sc.nextInt();
 
                         BService.makeBooking(userId, centreID, startTime);
+
                         break;
                     }
                     case 3: {

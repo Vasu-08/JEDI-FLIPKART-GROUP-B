@@ -43,6 +43,7 @@ public class BookingsBusiness {
 
             FlipFitSlotsBusiness flipFitSlotsBusiness = new FlipFitSlotsBusiness();
             flipFitSlotsBusiness.updateAvailability(slotdetails);
+            System.out.println("Slot booked successfully");
             return booking;
         }
         return null;
