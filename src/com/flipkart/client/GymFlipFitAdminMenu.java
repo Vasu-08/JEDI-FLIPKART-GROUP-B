@@ -9,6 +9,10 @@ import java.util.List;
 import java.util.Scanner;
 
 public class GymFlipFitAdminMenu {
+    /**
+     * getAdminView
+     * @throws InvalidChoiceException
+     */
     public static void getAdminView() throws InvalidChoiceException {
         try {
             Scanner sc = new Scanner(System.in);

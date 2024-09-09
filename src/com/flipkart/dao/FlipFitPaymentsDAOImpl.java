@@ -13,6 +13,10 @@ import java.sql.PreparedStatement;
 public class FlipFitPaymentsDAOImpl implements IFlipFitPaymentsDAO {
     Random rand = new Random();
 
+    /**
+     * setPaymentInfo
+     * @param FFP
+     */
     @Override
     public void setPaymentInfo(FlipFitPayments FFP) {
         try {
@@ -40,7 +44,10 @@ public class FlipFitPaymentsDAOImpl implements IFlipFitPaymentsDAO {
         }
     }
 
-
+    /**
+     * deletePaymentInfo
+     * @param FFP
+     */
     @Override
     public void deletePaymentInfo(FlipFitPayments FFP) {
         try {

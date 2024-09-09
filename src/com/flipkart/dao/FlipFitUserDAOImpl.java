@@ -10,6 +10,12 @@ import java.util.Random;
 public class FlipFitUserDAOImpl implements IFlipFitUserDAO {
     Random rand = new Random();
 
+    /**
+     * loginAsCustomer
+     * @param emailID
+     * @param password
+     * @return
+     */
     @Override
     public FlipFitUser loginAsCustomer(String emailID, String password) {
         String sql = "SELECT * from User where emailID=? and password=? and roleID=1";
@@ -34,6 +40,12 @@ public class FlipFitUserDAOImpl implements IFlipFitUserDAO {
         return null;
     }
 
+    /**
+     * loginAsOwner
+     * @param emailID
+     * @param password
+     * @return
+     */
     @Override
     public FlipFitUser loginAsOwner(String emailID, String password) {
         String sql = "SELECT * from User where emailID=? and password=? and roleID=2";
@@ -58,6 +70,10 @@ public class FlipFitUserDAOImpl implements IFlipFitUserDAO {
         return null;
     }
 
+    /**
+     * addUser
+     * @param FFU
+     */
     @Override
     public void addUser(FlipFitUser FFU) {
         try {
@@ -87,6 +103,10 @@ public class FlipFitUserDAOImpl implements IFlipFitUserDAO {
         }
     }
 
+    /**
+     * deleteUser
+     * @param FFU
+     */
     @Override
     public void deleteUser(FlipFitUser FFU) {
         try {
@@ -107,6 +127,10 @@ public class FlipFitUserDAOImpl implements IFlipFitUserDAO {
         }
     }
 
+    /**
+     * changeUser
+     * @param FFU
+     */
     @Override
     public void changeUser(FlipFitUser FFU) {
         try {
@@ -132,6 +156,11 @@ public class FlipFitUserDAOImpl implements IFlipFitUserDAO {
         }
     }
 
+    /**
+     * getUser
+     * @param userID
+     * @return
+     */
     @Override
     public FlipFitUser getUser(int userID) {
         FlipFitUser FFU = new FlipFitUser();
