@@ -2,6 +2,7 @@ package com.flipkart.bean;
 public class FlipFitPayments {
     private int userID;
     private int paymentType;
+    private String paymentInfo;
 
     public String getPaymentInfo() {
         return paymentInfo;
@@ -27,6 +28,4 @@ public class FlipFitPayments {
     public void setUserID(int userID) {
         this.userID = userID;
     }
-
-    private String paymentInfo;
 }
