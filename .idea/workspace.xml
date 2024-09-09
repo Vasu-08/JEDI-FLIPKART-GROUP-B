@@ -5,27 +5,94 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="3d0902cf-0c22-462b-8671-9d7911ba60ce" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/out/production/JEDI-Flipkart-Group-B-FlipFit-Application/com/flipkart/constant/DBConstants.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/JEDI-Flipkart-Group-B-FlipFit-Application/com/flipkart/constant/DBConstants.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/JEDI-Flipkart-Group-B-FlipFit-Application/com/flipkart/dao/FlipFitBookingDAOImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/JEDI-Flipkart-Group-B-FlipFit-Application/com/flipkart/dao/FlipFitBookingDAOImpl.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/JEDI-Flipkart-Group-B-FlipFit-Application/com/flipkart/dao/FlipFitGymCentreDAOImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/JEDI-Flipkart-Group-B-FlipFit-Application/com/flipkart/dao/FlipFitGymCentreDAOImpl.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/JEDI-Flipkart-Group-B-FlipFit-Application/com/flipkart/dao/FlipFitPaymentsDAOImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/JEDI-Flipkart-Group-B-FlipFit-Application/com/flipkart/dao/FlipFitPaymentsDAOImpl.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/JEDI-Flipkart-Group-B-FlipFit-Application/com/flipkart/dao/FlipFitSlotDAOImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/JEDI-Flipkart-Group-B-FlipFit-Application/com/flipkart/dao/FlipFitSlotDAOImpl.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/JEDI-Flipkart-Group-B-FlipFit-Application/com/flipkart/dao/FlipFitUserDAOImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/JEDI-Flipkart-Group-B-FlipFit-Application/com/flipkart/dao/FlipFitUserDAOImpl.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/flipkart/business/BookingsBusiness.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/flipkart/business/BookingsBusiness.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/mysql_connector_j_9_0_0.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/com/flipkart/constant/ColorConstants.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/JEDI-FLIPKART-GROUP-B.iml" beforeDir="false" afterPath="$PROJECT_DIR$/JEDI-FLIPKART-GROUP-B.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/JEDI-FLIPKART-GROUP-B/com/flipkart/bean/AbstractUser.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/JEDI-FLIPKART-GROUP-B/com/flipkart/bean/AbstractUser.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/JEDI-FLIPKART-GROUP-B/com/flipkart/bean/FlipFitAdmin.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/JEDI-FLIPKART-GROUP-B/com/flipkart/bean/FlipFitAdmin.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/JEDI-FLIPKART-GROUP-B/com/flipkart/bean/FlipFitBooking.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/JEDI-FLIPKART-GROUP-B/com/flipkart/bean/FlipFitBooking.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/JEDI-FLIPKART-GROUP-B/com/flipkart/bean/FlipFitGymCentre.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/JEDI-FLIPKART-GROUP-B/com/flipkart/bean/FlipFitGymCentre.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/JEDI-FLIPKART-GROUP-B/com/flipkart/bean/FlipFitGymCustomer.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/JEDI-FLIPKART-GROUP-B/com/flipkart/bean/FlipFitGymCustomer.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/JEDI-FLIPKART-GROUP-B/com/flipkart/bean/FlipFitGymOwner.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/JEDI-FLIPKART-GROUP-B/com/flipkart/bean/FlipFitGymOwner.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/JEDI-FLIPKART-GROUP-B/com/flipkart/bean/FlipFitPayments.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/JEDI-FLIPKART-GROUP-B/com/flipkart/bean/FlipFitPayments.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/JEDI-FLIPKART-GROUP-B/com/flipkart/bean/FlipFitSlots.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/JEDI-FLIPKART-GROUP-B/com/flipkart/bean/FlipFitSlots.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/JEDI-FLIPKART-GROUP-B/com/flipkart/bean/FlipFitUser.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/JEDI-FLIPKART-GROUP-B/com/flipkart/bean/FlipFitUser.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/JEDI-FLIPKART-GROUP-B/com/flipkart/business/BookingsBusiness.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/JEDI-FLIPKART-GROUP-B/com/flipkart/business/BookingsBusiness.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/JEDI-FLIPKART-GROUP-B/com/flipkart/business/FlipFitAdminBusiness.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/JEDI-FLIPKART-GROUP-B/com/flipkart/business/FlipFitAdminBusiness.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/JEDI-FLIPKART-GROUP-B/com/flipkart/business/FlipFitGymCentreBusiness.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/JEDI-FLIPKART-GROUP-B/com/flipkart/business/FlipFitGymCentreBusiness.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/JEDI-FLIPKART-GROUP-B/com/flipkart/business/FlipFitGymCustomerBusiness.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/JEDI-FLIPKART-GROUP-B/com/flipkart/business/FlipFitGymCustomerBusiness.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/JEDI-FLIPKART-GROUP-B/com/flipkart/business/FlipFitGymOwnerBusiness.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/JEDI-FLIPKART-GROUP-B/com/flipkart/business/FlipFitGymOwnerBusiness.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/JEDI-FLIPKART-GROUP-B/com/flipkart/business/FlipFitSlotsBusiness.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/JEDI-FLIPKART-GROUP-B/com/flipkart/business/FlipFitSlotsBusiness.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/JEDI-FLIPKART-GROUP-B/com/flipkart/business/interfaces/IFlipFitAdmin.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/JEDI-FLIPKART-GROUP-B/com/flipkart/business/interfaces/IFlipFitAdmin.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/JEDI-FLIPKART-GROUP-B/com/flipkart/business/interfaces/IFlipFitBookings.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/JEDI-FLIPKART-GROUP-B/com/flipkart/business/interfaces/IFlipFitBookings.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/JEDI-FLIPKART-GROUP-B/com/flipkart/business/interfaces/IFlipFitGymCentre.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/JEDI-FLIPKART-GROUP-B/com/flipkart/business/interfaces/IFlipFitGymCentre.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/JEDI-FLIPKART-GROUP-B/com/flipkart/business/interfaces/IFlipFitGymCustomer.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/JEDI-FLIPKART-GROUP-B/com/flipkart/business/interfaces/IFlipFitGymCustomer.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/JEDI-FLIPKART-GROUP-B/com/flipkart/business/interfaces/IFlipFitGymOwner.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/JEDI-FLIPKART-GROUP-B/com/flipkart/business/interfaces/IFlipFitGymOwner.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/JEDI-FLIPKART-GROUP-B/com/flipkart/business/interfaces/IFlipFitSlots.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/JEDI-FLIPKART-GROUP-B/com/flipkart/business/interfaces/IFlipFitSlots.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/JEDI-FLIPKART-GROUP-B/com/flipkart/client/GymFlipFitAdminMenu.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/JEDI-FLIPKART-GROUP-B/com/flipkart/client/GymFlipFitAdminMenu.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/JEDI-FLIPKART-GROUP-B/com/flipkart/client/GymFlipFitApplication.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/JEDI-FLIPKART-GROUP-B/com/flipkart/client/GymFlipFitApplication.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/JEDI-FLIPKART-GROUP-B/com/flipkart/client/GymFlipFitCustomerMenu.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/JEDI-FLIPKART-GROUP-B/com/flipkart/client/GymFlipFitCustomerMenu.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/JEDI-FLIPKART-GROUP-B/com/flipkart/client/GymFlipFitOwnerMenu.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/JEDI-FLIPKART-GROUP-B/com/flipkart/client/GymFlipFitOwnerMenu.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/JEDI-FLIPKART-GROUP-B/com/flipkart/constant/DBConstants.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/JEDI-FLIPKART-GROUP-B/com/flipkart/constant/DBConstants.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/JEDI-FLIPKART-GROUP-B/com/flipkart/dao/FlipFitAdminDAOImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/JEDI-FLIPKART-GROUP-B/com/flipkart/dao/FlipFitAdminDAOImpl.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/JEDI-FLIPKART-GROUP-B/com/flipkart/dao/FlipFitBookingDAOImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/JEDI-FLIPKART-GROUP-B/com/flipkart/dao/FlipFitBookingDAOImpl.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/JEDI-FLIPKART-GROUP-B/com/flipkart/dao/FlipFitGymCentreDAOImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/JEDI-FLIPKART-GROUP-B/com/flipkart/dao/FlipFitGymCentreDAOImpl.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/JEDI-FLIPKART-GROUP-B/com/flipkart/dao/FlipFitGymCustomerDAOImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/JEDI-FLIPKART-GROUP-B/com/flipkart/dao/FlipFitGymCustomerDAOImpl.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/JEDI-FLIPKART-GROUP-B/com/flipkart/dao/FlipFitGymOwnerDAOImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/JEDI-FLIPKART-GROUP-B/com/flipkart/dao/FlipFitGymOwnerDAOImpl.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/JEDI-FLIPKART-GROUP-B/com/flipkart/dao/FlipFitPaymentsDAOImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/JEDI-FLIPKART-GROUP-B/com/flipkart/dao/FlipFitPaymentsDAOImpl.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/JEDI-FLIPKART-GROUP-B/com/flipkart/dao/FlipFitSlotDAOImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/JEDI-FLIPKART-GROUP-B/com/flipkart/dao/FlipFitSlotDAOImpl.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/JEDI-FLIPKART-GROUP-B/com/flipkart/dao/FlipFitUserDAOImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/JEDI-FLIPKART-GROUP-B/com/flipkart/dao/FlipFitUserDAOImpl.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/JEDI-FLIPKART-GROUP-B/com/flipkart/dao/GetConnection.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/JEDI-FLIPKART-GROUP-B/com/flipkart/dao/GetConnection.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/JEDI-FLIPKART-GROUP-B/com/flipkart/dao/interfaces/IFlipFitAdminDAO.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/JEDI-FLIPKART-GROUP-B/com/flipkart/dao/interfaces/IFlipFitAdminDAO.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/JEDI-FLIPKART-GROUP-B/com/flipkart/dao/interfaces/IFlipFitBookingDAO.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/JEDI-FLIPKART-GROUP-B/com/flipkart/dao/interfaces/IFlipFitBookingDAO.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/JEDI-FLIPKART-GROUP-B/com/flipkart/dao/interfaces/IFlipFitGymCentreDAO.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/JEDI-FLIPKART-GROUP-B/com/flipkart/dao/interfaces/IFlipFitGymCentreDAO.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/JEDI-FLIPKART-GROUP-B/com/flipkart/dao/interfaces/IFlipFitGymCustomerDAO.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/JEDI-FLIPKART-GROUP-B/com/flipkart/dao/interfaces/IFlipFitGymCustomerDAO.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/JEDI-FLIPKART-GROUP-B/com/flipkart/dao/interfaces/IFlipFitGymOwnerDAO.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/JEDI-FLIPKART-GROUP-B/com/flipkart/dao/interfaces/IFlipFitGymOwnerDAO.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/JEDI-FLIPKART-GROUP-B/com/flipkart/dao/interfaces/IFlipFitPaymentsDAO.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/JEDI-FLIPKART-GROUP-B/com/flipkart/dao/interfaces/IFlipFitPaymentsDAO.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/JEDI-FLIPKART-GROUP-B/com/flipkart/dao/interfaces/IFlipFitSlotDAO.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/JEDI-FLIPKART-GROUP-B/com/flipkart/dao/interfaces/IFlipFitSlotDAO.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/JEDI-FLIPKART-GROUP-B/com/flipkart/dao/interfaces/IFlipFitUserDAO.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/JEDI-FLIPKART-GROUP-B/com/flipkart/dao/interfaces/IFlipFitUserDAO.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/JEDI-FLIPKART-GROUP-B/com/flipkart/exceptions/ExceptionHandler.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/JEDI-FLIPKART-GROUP-B/com/flipkart/exceptions/ExceptionHandler.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/JEDI-FLIPKART-GROUP-B/com/flipkart/exceptions/InvalidChoiceException.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/JEDI-FLIPKART-GROUP-B/com/flipkart/exceptions/InvalidChoiceException.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/JEDI-FLIPKART-GROUP-B/com/flipkart/utils/DB.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/JEDI-FLIPKART-GROUP-B/com/flipkart/utils/DB.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/src/.gitignore" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/flipkart/client/GymFlipFitAdminMenu.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/flipkart/client/GymFlipFitAdminMenu.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/flipkart/client/GymFlipFitApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/flipkart/client/GymFlipFitApplication.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/com/flipkart/client/GymFlipFitCustomerMenu.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/flipkart/client/GymFlipFitCustomerMenu.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/flipkart/constant/DBConstants.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/flipkart/constant/DBConstants.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/flipkart/client/GymFlipFitOwnerMenu.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/flipkart/client/GymFlipFitOwnerMenu.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/flipkart/dao/GetConnection.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/flipkart/dao/GetConnection.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Class" />
+      </list>
+    </option>
+  </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
-  <component name="ProjectColorInfo"><![CDATA[{
-  "associatedIndex": 2
+  <component name="GitHubPullRequestSearchHistory">{
+  &quot;lastFilter&quot;: {
+    &quot;state&quot;: &quot;OPEN&quot;,
+    &quot;assignee&quot;: &quot;Dradwing&quot;
+  }
+}</component>
+  <component name="GithubPullRequestsUISettings"><![CDATA[{
+  "selectedUrlAndAccountId": {
+    "url": "https://github.com/Vasu-08/JEDI-FLIPKART-GROUP-B.git",
+    "accountId": "78ad66d0-59ab-48bd-bbd2-98f8fbca6bc4"
+  }
 }]]></component>
+  <component name="ProjectColorInfo">{
+  &quot;associatedIndex&quot;: 2
+}</component>
   <component name="ProjectId" id="2lombh2qXqu77hFAwNHHUBVujkC" />
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
@@ -35,18 +102,26 @@
   "keyToString": {
     "Application.GymFlipFitApplication.executor": "Run",
     "RunOnceActivity.ShowReadmeOnStart": "true",
-    "git-widget-placeholder": "main",
+    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
+    "git-widget-placeholder": "ashutosh__main",
     "kotlin-language-version-configured": "true",
     "last_opened_file_path": "/Users/vasu.maheshwari/Desktop/jedi/JEDI-Flipkart-Group-B-FlipFit-Application",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "nodejs_package_manager_path": "npm",
     "project.structure.last.edited": "Libraries",
     "project.structure.proportion": "0.0",
-    "project.structure.side.proportion": "0.2"
+    "project.structure.side.proportion": "0.2",
+    "vue.rearranger.settings.migration": "true"
   }
 }]]></component>
   <component name="RunManager">
     <configuration name="GymFlipFitApplication" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="ALTERNATIVE_JRE_PATH" value="/Library/Java/JavaVirtualMachines/jdk-17.jdk/Contents/Home" />
       <option name="MAIN_CLASS_NAME" value="com.flipkart.client.GymFlipFitApplication" />
-      <module name="JEDI-Flipkart-Group-B-FlipFit-Application" />
+      <module name="JEDI-FLIPKART-GROUP-B" />
       <extension name="coverage">
         <pattern>
           <option name="PATTERN" value="com.flipkart.client.*" />
@@ -63,6 +138,14 @@
       </list>
     </recent_temporary>
   </component>
+  <component name="SharedIndexes">
+    <attachedChunks>
+      <set>
+        <option value="bundled-jdk-9823dce3aa75-b114ca120d71-intellij.indexing.shared.core-IU-242.21829.142" />
+        <option value="bundled-js-predefined-d6986cc7102b-7c0b70fcd90d-JavaScript-IU-242.21829.142" />
+      </set>
+    </attachedChunks>
+  </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
@@ -71,7 +154,23 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1725854876190</updated>
+      <workItem from="1725898776496" duration="1385000" />
+      <workItem from="1725900176003" duration="5170000" />
     </task>
     <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/com/flipkart/client/GymFlipFitApplication.java</url>
+          <line>27</line>
+          <option name="timeStamp" value="1" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
   </component>
 </project>
