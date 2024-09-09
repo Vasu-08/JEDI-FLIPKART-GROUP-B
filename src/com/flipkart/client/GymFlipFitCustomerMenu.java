@@ -29,7 +29,7 @@ public class GymFlipFitCustomerMenu {
             FlipFitGymCentreBusiness FCService = new FlipFitGymCentreBusiness(flipFitGymCenterDAO);
             FlipFitBookingDAOImpl flipFitBookingDAO = new FlipFitBookingDAOImpl();
             BookingsBusiness BService = new BookingsBusiness(flipFitBookingDAO);
-            int choice =0;
+            int choice = 0;
             do {
                 System.out.println("FlipFit Customer Menu:> ");
                 System.out.println("Choose an option:" +
@@ -52,26 +52,31 @@ public class GymFlipFitCustomerMenu {
                     }
                     case 2: {
                         System.out.println("View Centres");
+
                         List<FlipFitGymCentre> centreList = FCBservice.viewCentres();
                         for (FlipFitGymCentre centre : centreList) {
                             System.out.println("CentreId is: " + centre.getCentreID() + " City is: " + centre.getCity() + " Pincode is: " + centre.getPincode());
                         }
+
                         System.out.println("Choose a centre you want to book slot in");
                         int centreId = sc.nextInt();
+
                         List<FlipFitSlots> slotsList = FCService.viewAvailableSlots(centreId);
                         System.out.println("These are the available slots:");
                         for (FlipFitSlots flipFitSlots : slotsList) {
                             System.out.println("Slot Id is: " + flipFitSlots.getSlotId() + " Slot Timing is: " + flipFitSlots.getSlotTime() + " Availability is: " + flipFitSlots.getSeatsAvailable() + " CentreId is: " + flipFitSlots.getCentreId());
                         }
+
                         System.out.println("Give the startTime you wish to book");
                         int startTime = sc.nextInt();
+
                         System.out.println("Give the centre ID: ");
                         int centreID = sc.nextInt();
+
                         BService.makeBooking(userId, centreID, startTime);
                         break;
                     }
-                    case 3:
-                    {
+                    case 3: {
                         System.out.println("successful logout");
                     }
                     default: {
@@ -79,7 +84,7 @@ public class GymFlipFitCustomerMenu {
                     }
                 }
             }
-            while (choice != 4) ;
+            while (choice != 4);
         } catch (InvalidChoiceException e) {
             ExceptionHandler.InvalidChoiceMainMenu(e);
         }

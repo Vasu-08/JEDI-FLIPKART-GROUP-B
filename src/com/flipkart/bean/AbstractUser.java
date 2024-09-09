@@ -8,7 +8,7 @@ abstract class AbstractUser {
     private String phoneNumber;
     private String city;
     private String pinCode;
-    // Role: 0 -> customer, 1 -> gym owner
+    // Role: 0 -> customer, 1 -> gym owner, 2 -> admin
     private int role;
 
     public int getUserId() {

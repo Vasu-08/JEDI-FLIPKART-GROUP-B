@@ -10,6 +10,7 @@ import java.util.List;
 
 public class FlipFitGymOwnerBusiness implements IFlipFitGymOwner {
     private final IFlipFitGymOwnerDAO flipFitGymOwnerDAO ;
+
     public FlipFitGymOwnerBusiness(FlipFitGymOwnerDAOImpl FFOwner){
         this.flipFitGymOwnerDAO= FFOwner;
     }

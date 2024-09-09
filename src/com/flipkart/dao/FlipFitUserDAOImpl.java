@@ -1,7 +1,9 @@
 package com.flipkart.dao;
+
 import com.flipkart.bean.FlipFitUser;
 import com.flipkart.constant.DBConstants;
 import com.flipkart.dao.interfaces.*;
+
 import java.sql.*;
 import java.util.Random;
 
@@ -15,8 +17,8 @@ public class FlipFitUserDAOImpl implements IFlipFitUserDAO {
             stmt.setString(1, emailID);
             stmt.setString(2, password);
 
-            try(ResultSet rs = stmt.executeQuery()) {
-                if(rs.next()) {
+            try (ResultSet rs = stmt.executeQuery()) {
+                if (rs.next()) {
                     FlipFitUser flipFitUser = new FlipFitUser();
                     flipFitUser.setEmailID(emailID);
                     flipFitUser.setPassword(password);
@@ -39,8 +41,8 @@ public class FlipFitUserDAOImpl implements IFlipFitUserDAO {
             stmt.setString(1, emailID);
             stmt.setString(2, password);
 
-            try(ResultSet rs = stmt.executeQuery()) {
-                if(rs.next()) {
+            try (ResultSet rs = stmt.executeQuery()) {
+                if (rs.next()) {
                     FlipFitUser flipFitUser = new FlipFitUser();
                     flipFitUser.setEmailID(emailID);
                     flipFitUser.setPassword(password);
@@ -58,17 +60,17 @@ public class FlipFitUserDAOImpl implements IFlipFitUserDAO {
 
     @Override
     public void addUser(FlipFitUser FFU) {
-        try{
+        try {
             Class.forName("com.mysql.jdbc.Driver");
             Connection con = DriverManager.getConnection(
-                    DBConstants.DB_URL,DBConstants.USER,DBConstants.PASSWORD);
+                    DBConstants.DB_URL, DBConstants.USER, DBConstants.PASSWORD);
 
             PreparedStatement stmt = con.prepareStatement("INSERT INTO User VALUES (?, ?, ?, ?, ?, ?)");
 
 
             // Generate random integers in range 0 to 999
             FFU.setUserID(rand.nextInt(1000));
-            stmt.setInt(1,FFU.getUserID());
+            stmt.setInt(1, FFU.getUserID());
             stmt.setInt(2, FFU.getUserID());
             stmt.setInt(3, FFU.getRoleID());
             stmt.setString(5, FFU.getPhoneNumber());
@@ -87,7 +89,7 @@ public class FlipFitUserDAOImpl implements IFlipFitUserDAO {
 
     @Override
     public void deleteUser(FlipFitUser FFU) {
-        try{
+        try {
             Class.forName("com.mysql.jdbc.Driver");
             Connection con = DriverManager.getConnection(
                     DBConstants.DB_URL, DBConstants.USER, DBConstants.PASSWORD);
@@ -107,14 +109,14 @@ public class FlipFitUserDAOImpl implements IFlipFitUserDAO {
 
     @Override
     public void changeUser(FlipFitUser FFU) {
-        try{
+        try {
             Class.forName("com.mysql.jdbc.Driver");
             Connection con = DriverManager.getConnection(
-                    DBConstants.DB_URL,DBConstants.USER,DBConstants.PASSWORD);
+                    DBConstants.DB_URL, DBConstants.USER, DBConstants.PASSWORD);
 
             PreparedStatement stmt = con.prepareStatement(("UPDATE User SET userName = ?, roleID =? , emailId = ?, phoneNumber = ?, password = ? WHERE userID = ?"));
 
-            stmt.setInt(1,FFU.getUserID());
+            stmt.setInt(1, FFU.getUserID());
             stmt.setInt(2, FFU.getUserID());
             stmt.setInt(3, FFU.getRoleID());
             stmt.setString(5, FFU.getPhoneNumber());

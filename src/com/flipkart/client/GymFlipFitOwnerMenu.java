@@ -2,14 +2,12 @@ package com.flipkart.client;
 
 import com.flipkart.bean.FlipFitGymCentre;
 import com.flipkart.bean.FlipFitGymOwner;
+import com.flipkart.bean.FlipFitSlots;
 import com.flipkart.bean.FlipFitUser;
 import com.flipkart.business.FlipFitAdminBusiness;
 import com.flipkart.business.FlipFitGymCentreBusiness;
-import com.flipkart.business.FlipFitGymOwnerBusiness;
-import com.flipkart.dao.FlipFitAdminDAOImpl;
-import com.flipkart.dao.FlipFitGymCentreDAOImpl;
-import com.flipkart.dao.FlipFitGymCustomerDAOImpl;
-import com.flipkart.dao.FlipFitGymOwnerDAOImpl;
+import com.flipkart.business.*;
+import com.flipkart.dao.*;
 import com.flipkart.exceptions.InvalidChoiceException;
 
 import java.util.List;
@@ -20,32 +18,42 @@ public class GymFlipFitOwnerMenu {
         try {
             FlipFitGymOwnerDAOImpl flipFitGymOwnerDAO = new FlipFitGymOwnerDAOImpl();
             FlipFitGymOwnerBusiness GOBservice = new FlipFitGymOwnerBusiness(flipFitGymOwnerDAO);
+
             Scanner sc = new Scanner(System.in);
             int choice = 0;
+
             do {
                 System.out.println("Gym Owner Menu:> ");
-                System.out.println("Choose an option:" +
-                        "\n 1. Add Centre" +
-                        "\n 2. View Centres" +
-                        "\n 3. Logout");
+                System.out.println("""
+                        Choose an option:\
+                        
+                         1. Add Centre\
+                        
+                         2. View Centres\
+                        
+                         3. Add slot\
+                        
+                         4. Logout""");
+
                 choice = sc.nextInt();
                 switch (choice) {
                     case 1: {
                         System.out.println("Give details to add Centre : ");
+
                         Scanner scanner = new Scanner(System.in);
                         int ownerID = gymOwner.getUserID();
+
                         System.out.println("Enter Capacity: ");
                         int capacity = scanner.nextInt();
+
                         System.out.println("Enter City: ");
                         String city = scanner.next();
+
                         System.out.println("Enter State: ");
                         String state = scanner.next();
+
                         System.out.println("Enter Pincode: ");
                         String pincode = scanner.next();
-
-//                        FlipFitAdminDAOImpl adminDAO = new FlipFitAdminDAOImpl();
-//                        FlipFitAdminBusiness flipFitAdminBusiness = new FlipFitAdminBusiness(adminDAO);
-//                        boolean approved = flipFitAdminBusiness.validateOwner(ownerID);
 
                         FlipFitGymCentre flipFitGymCentre = new FlipFitGymCentre();
 
@@ -72,8 +80,35 @@ public class GymFlipFitOwnerMenu {
                         break;
                     }
                     case 3: {
-                        System.out.println("Successful logout");
+                        System.out.println("Give details to add slot in a gym");
+
+                        System.out.println("Enter gym center id");
+                        int centreId = sc.nextInt();
+
+                        System.out.println("Enter slot time");
+                        int slotTime = sc.nextInt();
+
+                        System.out.println("Enter the max capacity of the slot");
+                        int maxCapacity = sc.nextInt();
+
+                        FlipFitSlots slot = new FlipFitSlots();
+                        slot.setCentreId(centreId);
+                        slot.setSlotTime(slotTime);
+                        slot.setSeatsAvailable(maxCapacity);
+                        slot.setMaxCapacity(maxCapacity);
+
+                        FlipFitSlotDAOImpl slotDAO = new FlipFitSlotDAOImpl();
+                        slotDAO.addSlot(slot);
+
+                        System.out.println("Slot created successfully.");
+                        break;
                     }
+
+                    case 4: {
+                        System.out.println("Successful logout");
+                        break;
+                    }
+
                     default: {
                         throw new InvalidChoiceException("Invalid choice entered: " + choice);
                     }

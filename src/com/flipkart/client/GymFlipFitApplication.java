@@ -198,7 +198,8 @@ public class GymFlipFitApplication {
                     }
                     case 4: {
                         System.out.println("Exit");
-                        break;
+                        return;
+
                     }
                     default: {
                         throw new InvalidChoiceException("Invalid choice entered: " + choice);

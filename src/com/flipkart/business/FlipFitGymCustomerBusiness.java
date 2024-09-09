@@ -7,6 +7,7 @@ import com.flipkart.exceptions.InvalidChoiceException;
 
 public class FlipFitGymCustomerBusiness implements IFlipFitGymCustomer {
     private final FlipFitGymCustomerDAOImpl flipFitGymCustomerDAOImpl ;
+
     public FlipFitGymCustomerBusiness(FlipFitGymCustomerDAOImpl FFGymCustomer){
         this.flipFitGymCustomerDAOImpl=FFGymCustomer;
     }
@@ -18,10 +19,12 @@ public class FlipFitGymCustomerBusiness implements IFlipFitGymCustomer {
         FlipFitBookingDAOImpl bookingDAO = new FlipFitBookingDAOImpl();
         FlipFitSlotDAOImpl slotDAO = new FlipFitSlotDAOImpl();
         List<FlipFitBooking> bookingsList= bookingDAO.getAllBookings(userId);
+
         for (FlipFitBooking booking : bookingsList) {
             FlipFitSlots slotdetails = slotDAO.getSlotDetailsById(booking.getSlotId());
             System.out.println("Booking ID: " + booking.getBookingId() + " Slot timing " + slotdetails.getSlotTime());
         }
+
         return bookingsList;
     }
 

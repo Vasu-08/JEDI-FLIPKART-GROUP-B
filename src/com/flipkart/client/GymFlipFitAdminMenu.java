@@ -23,19 +23,27 @@ public class GymFlipFitAdminMenu {
             switch (choice) {
                 case 1: {
                     List<FlipFitGymOwner> flipFitGymOwnerList = adminService.getPendingOwnerList();
+
                     for (FlipFitGymOwner flipFitGymOwner : flipFitGymOwnerList) {
                         System.out.println("Owner ID :" + flipFitGymOwner.getUserId() + " Aadhar :" + flipFitGymOwner.getAadharNumber());
                     }
+
                     System.out.println("Type the ownerId of owner you wish to approve");
-                    String ownerId = sc.next();
-                    // TODO  Approve owner
+                    int ownerId = sc.nextInt();
+
+                    adminUser.validateOwner(ownerId);
+                    System.out.println("GymOwner with id "+ownerId+" approved");
+
+                    break;
                 }
                 case 2: {
                     System.out.println("Printing list of Approved Owners");
+
                     List<FlipFitGymOwner> flipFitGymOwnerList = adminService.getApprovedOwnerList();
                     for (FlipFitGymOwner flipFitGymOwner : flipFitGymOwnerList) {
                         System.out.println("Owner ID :" + flipFitGymOwner.getUserId() + " Aadhar :" + flipFitGymOwner.getAadharNumber());
                     }
+
                     break;
                 }
                 case 3: {

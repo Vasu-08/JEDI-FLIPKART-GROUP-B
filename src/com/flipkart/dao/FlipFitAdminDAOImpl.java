@@ -38,7 +38,7 @@ public class FlipFitAdminDAOImpl implements  IFlipFitAdminDAO {
     @Override
     public List<FlipFitGymOwner> getPendingOwnerList() {
         List<FlipFitGymOwner> pendingOwners = new ArrayList<>();
-        String sql = "SELECT ownerID,Aadhar FROM GymOwner WHERE approved = 0";
+        String sql = "SELECT ownerID, Aadhar FROM GymOwner WHERE approved = 0";
 
         try (Connection conn = GetConnection.getConnection();
              PreparedStatement stmt = conn.prepareStatement(sql);

@@ -5,6 +5,7 @@ public class FlipFitSlots {
     private int centreId;
     private int slotTime;
     private int seatsAvailable;
+    private int maxCapacity;
 
     public int getSlotId() {
         return slotId;
@@ -36,6 +37,14 @@ public class FlipFitSlots {
 
     public void setSeatsAvailable(int seatsAvailable) {
         this.seatsAvailable = seatsAvailable;
+    }
+
+    public void setMaxCapacity(int maxCapacity) {
+        this.maxCapacity = maxCapacity;
+    }
+
+    public int getMaxCapacity() {
+        return maxCapacity;
     }
 }
 
