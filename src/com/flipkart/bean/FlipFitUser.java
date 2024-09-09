@@ -1,5 +1,9 @@
 package com.flipkart.bean;
 
+/**
+ * unique details of a application user
+ */
+
 public class FlipFitUser {
     private int userID;
     private int roleID;
