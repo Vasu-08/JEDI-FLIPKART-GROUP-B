@@ -1,5 +1,9 @@
 package com.flipkart.bean;
 
+/**
+ * Information required from user to book a slot in the Flipkart application
+ */
+
 public class FlipFitBooking {
     private int bookingId;
     public int userId;

@@ -9,6 +9,11 @@ public class FlipFitGymCentre {
     private String state;
     private String pincode;
 
+    /**
+     * Information required from the gym owner to register his gym in the flipfit administration
+     * @return
+     */
+
     public int getCentreID() {
         return centreID;
     }

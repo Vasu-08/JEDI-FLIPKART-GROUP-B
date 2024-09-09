@@ -1,5 +1,9 @@
 package com.flipkart.bean;
 
+/**
+ * details to identify unique slots for a particular gym
+ */
+
 public class FlipFitSlots {
     private int slotId;
     private int centreId;

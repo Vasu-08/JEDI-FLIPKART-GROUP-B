@@ -1,5 +1,9 @@
 package com.flipkart.bean;
 
+/***
+ * verification details for the gym owner
+ */
+
 public class FlipFitGymOwner extends AbstractUser{
     public String panId;
     public String gstNum;

@@ -1,5 +1,9 @@
 package com.flipkart.bean;
 
+/**
+ * Here is the information required to identify the admin of the Flipfit application
+ */
+
 public class FlipFitAdmin  {
     private int userId;
     private String password;
