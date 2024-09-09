@@ -101,7 +101,7 @@ public class GymFlipFitCustomerMenu {
                     }
                     case 3: {
                         System.out.println(ColorConstants.GREEN + "Successfully logged out" + ColorConstants.RESET);
-                        break;
+                        return;
                     }
                     default: {
                         throw new InvalidChoiceException(ColorConstants.RED + "Invalid choice entered: " + choice + ColorConstants.RESET);

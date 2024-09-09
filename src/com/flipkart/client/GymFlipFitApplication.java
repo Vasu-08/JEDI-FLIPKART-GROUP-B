@@ -13,13 +13,16 @@ import com.flipkart.dao.FlipFitGymCustomerDAOImpl;
 import com.flipkart.dao.FlipFitGymOwnerDAOImpl;
 import com.flipkart.exceptions.ExceptionHandler;
 import com.flipkart.exceptions.InvalidChoiceException;
+
 import java.util.*;
+
 import com.flipkart.constant.ColorConstants;
 
 
 public class GymFlipFitApplication {
     /**
      * main
+     *
      * @param args
      * @throws InvalidChoiceException
      */
@@ -63,6 +66,8 @@ public class GymFlipFitApplication {
                                 FlipFitGymCustomerBusiness GCBservice = new FlipFitGymCustomerBusiness(flipFitGymCustomerDAO);
 
                                 gymCustomer = GCBservice.login(gymCustomer);
+                                 if (gymCustomer == null)
+                                     throw new IllegalStateException("Invalid credentials");
                                 System.out.println(ColorConstants.GREEN + "=========== Customer Menu ===========" + ColorConstants.RESET);
                                 GymFlipFitCustomerMenu.getFlipFitCustomerMenu(gymCustomer);
                                 break;
@@ -90,6 +95,8 @@ public class GymFlipFitApplication {
                                 FlipFitGymOwnerBusiness GOBservice = new FlipFitGymOwnerBusiness(flipFitGymOwnerDAO);
 
                                 gymOwner = GOBservice.login(gymOwner);
+                                if (gymOwner == null)
+                                    throw new IllegalStateException("Invalid credentials");
                                 System.out.println(ColorConstants.GREEN + "=========== GymOwner Menu ===========" + ColorConstants.RESET);
                                 GymFlipFitOwnerMenu.getFlipFitOwnerView(gymOwner);
                                 break;
@@ -193,7 +200,7 @@ public class GymFlipFitApplication {
                         FlipFitGymOwnerBusiness GOBservice = new FlipFitGymOwnerBusiness(flipFitGymOwnerDAO);
 
                         GOBservice.registerOwner(flipFitOwner);
-                        System.out.println(ColorConstants.GREEN + "Successfully registered "+ flipFitOwner.getUserName() + ColorConstants.RESET);
+                        System.out.println(ColorConstants.GREEN + "Successfully registered " + flipFitOwner.getUserName() + ColorConstants.RESET);
 
                         break;
                     }

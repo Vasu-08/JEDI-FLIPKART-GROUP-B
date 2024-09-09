@@ -135,7 +135,7 @@ public class GymFlipFitOwnerMenu {
 
                     case 5: {
                         System.out.println(ColorConstants.GREEN + "Successfully logged out." + ColorConstants.RESET);
-                        break;
+                        return;
                     }
 
                     default: {

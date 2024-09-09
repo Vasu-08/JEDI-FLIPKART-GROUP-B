@@ -31,6 +31,7 @@ public class GymFlipFitAdminMenu {
                          2. View Approved Owners
                          3. View all FlipFit Customers
                          4. View all Centres Using OwnerId
+                         5. Logout
                         """ + ColorConstants.RESET);
 
             int choice = sc.nextInt();
@@ -93,6 +94,11 @@ public class GymFlipFitAdminMenu {
                     }
 
                     break;
+                }
+
+                case 5: {
+                    System.out.println("Successfully logged out");
+                    return;
                 }
 
                 default: {

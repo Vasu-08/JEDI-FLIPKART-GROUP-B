@@ -49,10 +49,11 @@ public class FlipFitUserDAOImpl implements IFlipFitUserDAO {
      */
     @Override
     public FlipFitUser loginAsOwner(String emailID, String password) {
-        String sql = "SELECT * from User where emailID=? and password=? and roleID=1";
+        String sql = "SELECT * from FlipFitSchema.User where emailID=? and password=? and roleID=1";
         try (Connection conn = GetConnection.getConnection(); PreparedStatement stmt = conn.prepareStatement(sql)) {
             stmt.setString(1, emailID);
             stmt.setString(2, password);
+            System.out.println(stmt);
 
             try (ResultSet rs = stmt.executeQuery()) {
                 if (rs.next()) {
