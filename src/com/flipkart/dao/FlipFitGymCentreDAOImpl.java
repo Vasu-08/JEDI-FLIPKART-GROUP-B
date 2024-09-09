@@ -40,7 +40,7 @@ public class FlipFitGymCentreDAOImpl {
 //    }
     public FlipFitGymCentre createGymCentre(FlipFitGymCentre FFGC){
         try{
-            Class.forName("com.mysql.jdbc.Driver");
+            Class.forName("com.mysql.cj.jdbc.Driver");
             Connection con = DriverManager.getConnection(
                     DBConstants.DB_URL,DBConstants.USER,DBConstants.PASSWORD);
 
@@ -69,7 +69,7 @@ public class FlipFitGymCentreDAOImpl {
 
     public FlipFitGymCentre updateGymCentre(FlipFitGymCentre FFGC){
         try{
-            Class.forName("com.mysql.jdbc.Driver");
+            Class.forName("com.mysql.cj.jdbc.Driver");
             Connection con = DriverManager.getConnection(
                     DBConstants.DB_URL,DBConstants.USER,DBConstants.PASSWORD);
 
@@ -96,7 +96,7 @@ public class FlipFitGymCentreDAOImpl {
 
     public void deleteGymCentre(FlipFitGymCentre FFGC){
         try{
-            Class.forName("com.mysql.jdbc.Driver");
+            Class.forName("com.mysql.cj.jdbc.Driver");
             Connection con = DriverManager.getConnection(
                     DBConstants.DB_URL,DBConstants.USER,DBConstants.PASSWORD);
 
@@ -116,7 +116,7 @@ public class FlipFitGymCentreDAOImpl {
     public ArrayList<FlipFitGymCentre> viewCentres(String city){
         ArrayList<FlipFitGymCentre> ffarray = new ArrayList<FlipFitGymCentre>();
         try{
-            Class.forName("com.mysql.jdbc.Driver");
+            Class.forName("com.mysql.cj.jdbc.Driver");
             Connection con = DriverManager.getConnection(
                     DBConstants.DB_URL,DBConstants.USER,DBConstants.PASSWORD);
 
@@ -151,7 +151,7 @@ public class FlipFitGymCentreDAOImpl {
             ArrayList<FlipFitSlots> ffarray = new ArrayList<FlipFitSlots>();
 
             try{
-                Class.forName("com.mysql.jdbc.Driver");
+                Class.forName("com.mysql.cj.jdbc.Driver");
                 Connection con = DriverManager.getConnection(
                         DBConstants.DB_URL,DBConstants.USER,DBConstants.PASSWORD);
 

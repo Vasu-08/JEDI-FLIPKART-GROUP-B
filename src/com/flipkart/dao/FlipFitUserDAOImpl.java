@@ -61,7 +61,7 @@ public class FlipFitUserDAOImpl implements IFlipFitUserDAO {
     @Override
     public void addUser(FlipFitUser FFU) {
         try {
-            Class.forName("com.mysql.jdbc.Driver");
+            Class.forName("com.mysql.cj.jdbc.Driver");
             Connection con = DriverManager.getConnection(
                     DBConstants.DB_URL, DBConstants.USER, DBConstants.PASSWORD);
 
@@ -90,7 +90,7 @@ public class FlipFitUserDAOImpl implements IFlipFitUserDAO {
     @Override
     public void deleteUser(FlipFitUser FFU) {
         try {
-            Class.forName("com.mysql.jdbc.Driver");
+            Class.forName("com.mysql.cj.jdbc.Driver");
             Connection con = DriverManager.getConnection(
                     DBConstants.DB_URL, DBConstants.USER, DBConstants.PASSWORD);
 
@@ -110,7 +110,7 @@ public class FlipFitUserDAOImpl implements IFlipFitUserDAO {
     @Override
     public void changeUser(FlipFitUser FFU) {
         try {
-            Class.forName("com.mysql.jdbc.Driver");
+            Class.forName("com.mysql.cj.jdbc.Driver");
             Connection con = DriverManager.getConnection(
                     DBConstants.DB_URL, DBConstants.USER, DBConstants.PASSWORD);
 
@@ -137,7 +137,7 @@ public class FlipFitUserDAOImpl implements IFlipFitUserDAO {
         FlipFitUser FFU = new FlipFitUser();
 
         try {
-            Class.forName("com.mysql.jdbc.Driver");
+            Class.forName("com.mysql.cj.jdbc.Driver");
             Connection con = DriverManager.getConnection(
                     DBConstants.DB_URL, DBConstants.USER, DBConstants.PASSWORD);
 

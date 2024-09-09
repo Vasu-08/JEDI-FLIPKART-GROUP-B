@@ -41,7 +41,7 @@ public class FlipFitSlotDAOImpl implements IFlipFitSlotDAO {
     @Override
     public boolean deleteSlot(int slotID) {
         try {
-            Class.forName("com.mysql.jdbc.Driver");
+            Class.forName("com.mysql.cj.jdbc.Driver");
             Connection con = DriverManager.getConnection(
                     DBConstants.DB_URL, DBConstants.USER, DBConstants.PASSWORD);
 
@@ -88,7 +88,7 @@ public class FlipFitSlotDAOImpl implements IFlipFitSlotDAO {
         List<FlipFitSlots> slots = new ArrayList<>();
 
         try {
-            Class.forName("com.mysql.jdbc.Driver");
+            Class.forName("com.mysql.cj.jdbc.Driver");
             Connection con = DriverManager.getConnection(
                     DBConstants.DB_URL, DBConstants.USER, DBConstants.PASSWORD);
 

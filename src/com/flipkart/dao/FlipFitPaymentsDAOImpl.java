@@ -31,7 +31,7 @@ public class FlipFitPaymentsDAOImpl implements IFlipFitPaymentsDAO {
     @Override
     public void setPaymentInfo(FlipFitPayments FFP) {
         try{
-            Class.forName("com.mysql.jdbc.Driver");
+            Class.forName("com.mysql.cj.jdbc.Driver");
             Connection con = DriverManager.getConnection(
                     DBConstants.DB_URL,DBConstants.USER,DBConstants.PASSWORD);
 
@@ -57,7 +57,7 @@ public class FlipFitPaymentsDAOImpl implements IFlipFitPaymentsDAO {
     @Override
     public void deletePaymentInfo(FlipFitPayments FFP) {
         try{
-            Class.forName("com.mysql.jdbc.Driver");
+            Class.forName("com.mysql.cj.jdbc.Driver");
             Connection con = DriverManager.getConnection(
                     DBConstants.DB_URL,DBConstants.USER,DBConstants.PASSWORD);
 

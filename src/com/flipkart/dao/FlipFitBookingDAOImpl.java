@@ -98,7 +98,7 @@ public class FlipFitBookingDAOImpl implements IFlipFitBookingDAO {
         List<FlipFitBooking> bookings = new ArrayList<>(); // Initialize the list to an empty list
 
         try {
-            Class.forName("com.mysql.jdbc.Driver");
+            Class.forName("com.mysql.cj.jdbc.Driver");
             Connection con = DriverManager.getConnection(
                     DBConstants.DB_URL, DBConstants.USER, DBConstants.PASSWORD);
 
@@ -136,7 +136,7 @@ public class FlipFitBookingDAOImpl implements IFlipFitBookingDAO {
     public List getBookingDetails(int bookingId) {
         List bookings = new ArrayList<>();
         try {
-            Class.forName("com.mysql.jdbc.Driver");
+            Class.forName("com.mysql.cj.jdbc.Driver");
             Connection con = DriverManager.getConnection(
                     DBConstants.DB_URL, DBConstants.USER, DBConstants.PASSWORD);
 
