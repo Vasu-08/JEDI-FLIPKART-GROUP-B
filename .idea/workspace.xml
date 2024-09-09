@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="3d0902cf-0c22-462b-8671-9d7911ba60ce" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/out/production/JEDI-Flipkart-Group-B-FlipFit-Application/com/flipkart/constant/DBConstants.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/JEDI-Flipkart-Group-B-FlipFit-Application/com/flipkart/constant/DBConstants.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/JEDI-Flipkart-Group-B-FlipFit-Application/com/flipkart/dao/FlipFitBookingDAOImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/JEDI-Flipkart-Group-B-FlipFit-Application/com/flipkart/dao/FlipFitBookingDAOImpl.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/JEDI-Flipkart-Group-B-FlipFit-Application/com/flipkart/dao/FlipFitGymCentreDAOImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/JEDI-Flipkart-Group-B-FlipFit-Application/com/flipkart/dao/FlipFitGymCentreDAOImpl.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/JEDI-Flipkart-Group-B-FlipFit-Application/com/flipkart/dao/FlipFitPaymentsDAOImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/JEDI-Flipkart-Group-B-FlipFit-Application/com/flipkart/dao/FlipFitPaymentsDAOImpl.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/JEDI-Flipkart-Group-B-FlipFit-Application/com/flipkart/dao/FlipFitSlotDAOImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/JEDI-Flipkart-Group-B-FlipFit-Application/com/flipkart/dao/FlipFitSlotDAOImpl.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/JEDI-Flipkart-Group-B-FlipFit-Application/com/flipkart/dao/FlipFitUserDAOImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/JEDI-Flipkart-Group-B-FlipFit-Application/com/flipkart/dao/FlipFitUserDAOImpl.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/flipkart/business/BookingsBusiness.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/flipkart/business/BookingsBusiness.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/flipkart/client/GymFlipFitCustomerMenu.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/flipkart/client/GymFlipFitCustomerMenu.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/flipkart/constant/DBConstants.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/flipkart/constant/DBConstants.java" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="ProjectColorInfo"><![CDATA[{
+  "associatedIndex": 2
+}]]></component>
+  <component name="ProjectId" id="2lombh2qXqu77hFAwNHHUBVujkC" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "Application.GymFlipFitApplication.executor": "Run",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "git-widget-placeholder": "main",
+    "kotlin-language-version-configured": "true",
+    "last_opened_file_path": "/Users/vasu.maheshwari/Desktop/jedi/JEDI-Flipkart-Group-B-FlipFit-Application",
+    "project.structure.last.edited": "Libraries",
+    "project.structure.proportion": "0.0",
+    "project.structure.side.proportion": "0.2"
+  }
+}]]></component>
+  <component name="RunManager">
+    <configuration name="GymFlipFitApplication" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="com.flipkart.client.GymFlipFitApplication" />
+      <module name="JEDI-Flipkart-Group-B-FlipFit-Application" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.flipkart.client.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Application.GymFlipFitApplication" />
+      </list>
+    </recent_temporary>
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="3d0902cf-0c22-462b-8671-9d7911ba60ce" name="Changes" comment="" />
+      <created>1725854876190</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1725854876190</updated>
+    </task>
+    <servers />
+  </component>
+</project>
