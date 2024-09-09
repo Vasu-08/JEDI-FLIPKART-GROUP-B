@@ -7,7 +7,8 @@ import com.flipkart.dao.FlipFitAdminDAOImpl;
 import java.util.List;
 
 public class FlipFitAdminBusiness implements IFlipFitAdmin {
-    private final IFlipFitAdminDAO flipFitAdminDAOImpl ;
+    private final IFlipFitAdminDAO flipFitAdminDAOImpl;
+
     public FlipFitAdminBusiness(FlipFitAdminDAOImpl FFAdmin){
         this.flipFitAdminDAOImpl=FFAdmin;
     }

@@ -13,7 +13,6 @@ import com.flipkart.dao.FlipFitGymCustomerDAOImpl;
 import com.flipkart.dao.FlipFitGymOwnerDAOImpl;
 import com.flipkart.exceptions.ExceptionHandler;
 import com.flipkart.exceptions.InvalidChoiceException;
-
 import java.util.*;
 
 public class GymFlipFitApplication {
@@ -151,7 +150,7 @@ public class GymFlipFitApplication {
                         flipFitGymCustomer.setUserName(username);
                         flipFitGymCustomer.setCity(city);
                         flipFitGymCustomer.setPinCode(pinCode);
-                        flipFitGymCustomer.setRole(1);
+                        flipFitGymCustomer.setRole(0);
 
 
                         flipFitGymCustomer = GCBservice.registerCustomer(flipFitGymCustomer);
@@ -201,7 +200,7 @@ public class GymFlipFitApplication {
                         flipFitOwner.setCity(city);
                         flipFitOwner.setPinCode(pinCode);
                         flipFitOwner.setUserName(username);
-                        flipFitOwner.setRole(2);
+                        flipFitOwner.setRole(1);
                         flipFitOwner.setGSTIN(gstNum);
                         flipFitOwner.setAadharNumber(aadharNumber);
                         flipFitOwner.setPanId(panId);

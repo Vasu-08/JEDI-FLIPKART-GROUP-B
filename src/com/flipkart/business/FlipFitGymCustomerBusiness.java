@@ -1,9 +1,9 @@
 package com.flipkart.business;
-import com.flipkart.dao.*;
 import com.flipkart.bean.*;
 import com.flipkart.business.interfaces.IFlipFitGymCustomer;
-import java.util.List;
+import com.flipkart.dao.*;
 import com.flipkart.exceptions.InvalidChoiceException;
+import java.util.List;
 
 public class FlipFitGymCustomerBusiness implements IFlipFitGymCustomer {
     private final FlipFitGymCustomerDAOImpl flipFitGymCustomerDAOImpl ;
@@ -58,23 +58,24 @@ public class FlipFitGymCustomerBusiness implements IFlipFitGymCustomer {
 //        }
 
     }
+
     @Override
     public FlipFitGymCustomer registerCustomer(FlipFitGymCustomer flipFitGymCustomer) {
-
         FlipFitUser flipFitUser = new FlipFitUser();
         flipFitUser.setPassword(flipFitGymCustomer.getPassword());
         flipFitUser.setEmailID(flipFitGymCustomer.getEmailID());
         flipFitUser.setPhoneNumber(flipFitGymCustomer.getPhoneNumber());
         flipFitUser.setUserName(flipFitGymCustomer.getUserName());
-        flipFitUser.setRoleID(1);
-        flipFitGymCustomer.setRole(1);
+        flipFitUser.setRoleID(0);
+        flipFitGymCustomer.setRole(0);
         flipFitGymCustomerDAOImpl.addUser(flipFitUser);
         return flipFitGymCustomerDAOImpl.addCustomer(flipFitGymCustomer, flipFitUser);
     }
+
     @Override
     public FlipFitUser login(FlipFitUser flipFitUser) {
         FlipFitUserDAOImpl userDAO = new FlipFitUserDAOImpl();
-        flipFitUser.setRoleID(1);
+        flipFitUser.setRoleID(0);
         flipFitUser = userDAO.loginAsCustomer(flipFitUser.getEmailID(), flipFitUser.getPassword());
         return flipFitUser;
     }

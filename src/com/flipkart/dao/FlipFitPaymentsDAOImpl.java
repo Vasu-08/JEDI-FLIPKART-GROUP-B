@@ -15,6 +15,7 @@ public class FlipFitPaymentsDAOImpl implements IFlipFitPaymentsDAO {
 
     /**
      * setPaymentInfo
+     *
      * @param FFP
      */
     @Override
@@ -46,6 +47,7 @@ public class FlipFitPaymentsDAOImpl implements IFlipFitPaymentsDAO {
 
     /**
      * deletePaymentInfo
+     *
      * @param FFP
      */
     @Override

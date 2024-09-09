@@ -132,7 +132,7 @@ public class GymFlipFitOwnerMenu {
 
                     case 5: {
                         System.out.println("Successful logout");
-                        break;
+                        return;
                     }
 
                     default: {

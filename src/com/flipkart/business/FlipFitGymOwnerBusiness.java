@@ -1,10 +1,9 @@
 package com.flipkart.business;
 
-import com.flipkart.dao.*;
-import com.flipkart.dao.FlipFitGymOwnerDAOImpl;
-import com.flipkart.dao.interfaces.IFlipFitGymOwnerDAO;
 import com.flipkart.bean.*;
 import com.flipkart.business.interfaces.IFlipFitGymOwner;
+import com.flipkart.dao.*;
+import com.flipkart.dao.interfaces.IFlipFitGymOwnerDAO;
 import com.flipkart.exceptions.InvalidChoiceException;
 import java.util.List;
 
@@ -29,9 +28,7 @@ public class FlipFitGymOwnerBusiness implements IFlipFitGymOwner {
         System.out.println("Centres listed:> ");
         return flipFitGymOwnerDAO.viewCentresByOwnerID(flipFitGymOwner);
     }
-//    public List<FlipFitUser> viewFlipFitCustomers(FlipFitGymCentre flipFitGymCentre) {
-//        return flipFitGymOwnerDAO.viewFlipFitCustomers(flipFitGymCentre);
-//    }
+
     public List<FlipFitPayments> viewPayments() {
         System.out.println("Payments listed:> ");
         return null;
@@ -46,8 +43,8 @@ public class FlipFitGymOwnerBusiness implements IFlipFitGymOwner {
         user.setEmailID(GymOwner.getEmailID());
         user.setPhoneNumber(GymOwner.getPhoneNumber());
         user.setUserName(GymOwner.getUserName());
-        user.setRoleID(2);
-        GymOwner.setRole(2);
+        user.setRoleID(1);
+        GymOwner.setRole(1);
 
         user=flipFitGymOwnerDAO.addUser(user);
         return flipFitGymOwnerDAO.addGymOwner(GymOwner, user);
@@ -55,7 +52,7 @@ public class FlipFitGymOwnerBusiness implements IFlipFitGymOwner {
     @Override
     public FlipFitUser login(FlipFitUser flipFitUser) {
         FlipFitUserDAOImpl userDAO = new FlipFitUserDAOImpl();
-        flipFitUser.setRoleID(2);
+        flipFitUser.setRoleID(1);
         flipFitUser=userDAO.loginAsOwner(flipFitUser.getEmailID(), flipFitUser.getPassword());
         return flipFitUser;
     }

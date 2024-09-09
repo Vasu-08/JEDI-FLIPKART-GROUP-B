@@ -99,7 +99,8 @@ public class GymFlipFitCustomerMenu {
                         break;
                     }
                     case 3: {
-                        System.out.println("successful logout");
+                        System.out.println("Successful logout");
+                        return;
                     }
                     default: {
                         throw new InvalidChoiceException("Invalid choice entered: " + choice);
