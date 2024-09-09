@@ -1,11 +1,15 @@
 package com.flipkart.business;
 
+import com.flipkart.client.GymFlipFitPaymentMenu;
 import com.flipkart.dao.FlipFitGymCustomerDAOImpl;
 import com.flipkart.dao.interfaces.IFlipFitBookingDAO;
 import com.flipkart.bean.FlipFitBooking;
 import com.flipkart.bean.FlipFitSlots;
 import com.flipkart.dao.FlipFitBookingDAOImpl;
 import com.flipkart.dao.FlipFitSlotDAOImpl;
+
+import java.sql.SQLOutput;
+import java.util.Scanner;
 
 public class BookingsBusiness {
     private final IFlipFitBookingDAO bookingDAO;
@@ -15,8 +19,8 @@ public class BookingsBusiness {
     }
 
     public FlipFitBooking makeBooking(int userID, int centreID, int startTime) {
+        Scanner sc = new Scanner(System.in);
 
-//        System.out.println("Making a booking for " + userID);
         FlipFitSlotDAOImpl slotDAO = new FlipFitSlotDAOImpl();
         FlipFitSlots slotdetails = slotDAO.getSlotDetails(startTime, centreID);
 
@@ -25,6 +29,7 @@ public class BookingsBusiness {
         if (slotdetails != null && slotdetails.getSeatsAvailable() > 0) {
             FlipFitBooking booking = flipFitGymCustomerBusiness.checkBookingConflicts(userID, startTime);
             if (booking != null) {
+                System.out.println("The user has already booked a slot at the same time.");
                 deleteBooking(booking.getBookingId());
             }
             booking = new FlipFitBooking();
@@ -33,10 +38,9 @@ public class BookingsBusiness {
             booking.setUserId(userID);
             booking.setIsdeleted(false);
 
-            bookingDAO.makeBooking(booking);
-//            System.out.println("Booking completed");
+            if(GymFlipFitPaymentMenu.getFlipFitPaymentMenu()); System.out.println("Payment successful");
 
-//            FlipFitSlots currflipFitSlots = slotdetails;
+            bookingDAO.makeBooking(booking);
 
             int seatsAvailable = slotdetails.getSeatsAvailable();
             slotdetails.setSeatsAvailable(seatsAvailable - 1);
