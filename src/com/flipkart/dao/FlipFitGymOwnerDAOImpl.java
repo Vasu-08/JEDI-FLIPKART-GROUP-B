@@ -11,7 +11,6 @@ import java.util.List;
 import com.flipkart.bean.FlipFitUser;
 
 public class FlipFitGymOwnerDAOImpl implements IFlipFitGymOwnerDAO {
-    Random rand = new Random();
 
     /**
      * addCentre
@@ -78,26 +77,6 @@ public class FlipFitGymOwnerDAOImpl implements IFlipFitGymOwnerDAO {
 
         return gymcentres;
     }
-
-//    @Override
-//    public List<FlipFitUser> viewFlipFitCustomers(FlipFitGymCentre centre) {
-//        List<FlipFitUser> flipfitusers = new ArrayList<>();
-//        String sql = "SELECT * from Booking where userID = ? and isDeleted = false";
-//        try (Connection conn = GetConnection.getConnection(); PreparedStatement stmt = conn.prepareStatement(sql)){
-//            stmt.setInt(1, centre.getOwnerID());
-//            ResultSet rs = stmt.executeQuery();
-//            while (rs.next()) {
-//                FlipFitUser flipfituser = new FlipFitUser();
-//                flipfituser.setUserID(rs.getInt("userID"));
-//                flipfitusers.add(flipfituser);
-//            }
-//        }
-//        catch (SQLException e) {
-//            e.printStackTrace();
-//        }
-//
-//        return flipfitusers;
-//   }
 
     /**
      * editDetails
