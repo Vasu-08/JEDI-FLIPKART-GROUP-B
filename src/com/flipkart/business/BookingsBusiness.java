@@ -38,7 +38,7 @@ public class BookingsBusiness {
             booking.setUserId(userID);
             booking.setIsdeleted(false);
 
-            if(GymFlipFitPaymentMenu.getFlipFitPaymentMenu()); System.out.println("Payment successful");
+            if(GymFlipFitPaymentMenu.getFlipFitPaymentMenu(userID)) System.out.println("Payment successful");
 
             bookingDAO.makeBooking(booking);
 

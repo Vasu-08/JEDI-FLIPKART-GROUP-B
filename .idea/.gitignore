@@ -2,3 +2,5 @@
 /shelf/
 /workspace.xml
 .idea/
+src/com/flipkart/constant/DBConstants.java
+src/com/flipkart/dao/GetConnection.java

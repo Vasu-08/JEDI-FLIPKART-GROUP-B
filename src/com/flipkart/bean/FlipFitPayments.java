@@ -3,6 +3,7 @@ public class FlipFitPayments {
     private int userID;
     // 1 -> UPI / 2 -> Debit Card
     private int paymentType;
+    private String paymentInfo;
 
     public String getPaymentInfo() {
         return paymentInfo;
@@ -28,6 +29,4 @@ public class FlipFitPayments {
     public void setUserID(int userID) {
         this.userID = userID;
     }
-
-    private String paymentInfo;
 }
